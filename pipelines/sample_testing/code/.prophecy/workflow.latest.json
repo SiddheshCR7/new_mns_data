@@ -62,13 +62,726 @@
     "topLevelPackage" : "sample_testing",
     "configurationVersion" : "v1"
   },
-  "connections" : [ ],
-  "processes" : { },
+  "connections" : [ {
+    "id" : "yPDgKq9otIhbdSUe6GaLE$$yq2RSW2eeel7tzrxmIL0s",
+    "source" : "qgvzssGfxexYLWy6kMo43$$PAQDff4Z6lToybQsXzMvO",
+    "sourcePort" : "6mY27dBUxYApr9gFzsDsl$$rhtoWUl3VY60n1t5bKZ6y",
+    "target" : "b7ohBIzUYBpAIk3cs37oa$$YO13DqUnJ6J68RyzXJiOO",
+    "targetPort" : "r-VtigBZ9vRQbmR9RuFQx$$Vsk0FQq3KqQzDfFCudZOT"
+  }, {
+    "id" : "mZXel_DDZRkPUYU-klUOx",
+    "source" : "9F230PsVb3WuBPASvwYnG$$UdgpUZ0wKgzPmlMfDQOlt",
+    "sourcePort" : "UZIsIyte3miNr9LjiVTcM$$x_VVxnJuaFpjyxXSkxN4L",
+    "target" : "H_EJM1LrgVswSHqiR2vO2$$RAofa0S1CsCSfFF7TqIxt",
+    "targetPort" : "2jZ86ZMBvMCr2_xwfFec7$$sVrCfSkfbcm8SYunPLHfJ"
+  }, {
+    "id" : "HwegEG9ulU3VMo4yCzTYI",
+    "source" : "zcmcBUXNAdFaJOtHpNBM9$$0LF9VoA_LRTQ6yGuG4Ph9",
+    "sourcePort" : "u1ZnTSYNqk5cm9GrNkuxv$$jLKxlrBwh85imwYXJgOiG",
+    "target" : "H_EJM1LrgVswSHqiR2vO2$$RAofa0S1CsCSfFF7TqIxt",
+    "targetPort" : "qTWrRrDCz9dp3HQn6zY6z$$gmguyfV_BwEWoUFO3oRMU"
+  }, {
+    "id" : "NegGdChLBX3E1TupmkGpL",
+    "source" : "b7ohBIzUYBpAIk3cs37oa$$YO13DqUnJ6J68RyzXJiOO",
+    "sourcePort" : "9OI-AuknS2KwaTL98SMWq$$1a8hwjRpW-tehtGamS2OG",
+    "target" : "qatNsO_6jcpNyAuwDU2Dj$$U93Cbu_xwfMmdHgifNDnI",
+    "targetPort" : "yaIyBGIC09FRtWBkL6V7Z$$Xjqu-NvRZgDokW-2q273o"
+  }, {
+    "id" : "h8onk16p6oF4ui2dPyDjc",
+    "source" : "H_EJM1LrgVswSHqiR2vO2$$RAofa0S1CsCSfFF7TqIxt",
+    "sourcePort" : "ayyRsUl0n3G1iYBWM1JA4$$9T7OYI2db1hZPzxOTiZI7",
+    "target" : "qatNsO_6jcpNyAuwDU2Dj$$U93Cbu_xwfMmdHgifNDnI",
+    "targetPort" : "nEmANiF-AB3wNY4TZc8rB$$TZc0P_PcSHzkkeE3WTWiR"
+  }, {
+    "id" : "dU31UE1Gb2UCpyjlzl917$$TRpcTa4vX5qu3fHm0bx3Y",
+    "source" : "JuarOxOTpSmk0pZz9-zcZ$$Xa2yESXxPfhImuvCeXIu2",
+    "sourcePort" : "sxkY4doSZXtf_OWq1s9lx$$l2eNwzpUEQWvxZ8o7aStt",
+    "target" : "b7ohBIzUYBpAIk3cs37oa$$YO13DqUnJ6J68RyzXJiOO",
+    "targetPort" : "xcEvO8G6kuOFdcCWagOWD$$s6OFNTyIq5-w-F2pJQfPI"
+  }, {
+    "id" : "Xtpz4PImZ581kfqgXdQ6y",
+    "source" : "CAiu8QeDU8QyaCGYjGuWH$$5FtJ91li1xfoZ3t-CuRYx",
+    "sourcePort" : "yJZmBx2P7HcCDxYnUXawh$$vVgOixSBjUtjvWHSBOs5a",
+    "target" : "JuarOxOTpSmk0pZz9-zcZ$$Xa2yESXxPfhImuvCeXIu2",
+    "targetPort" : "f8Ui6VH5cU_61vK-gu_H0$$U6FUbcomuAg1E53OEejGZ"
+  } ],
+  "processes" : {
+    "qgvzssGfxexYLWy6kMo43$$PAQDff4Z6lToybQsXzMvO" : {
+      "id" : "qgvzssGfxexYLWy6kMo43$$PAQDff4Z6lToybQsXzMvO",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "product-detail",
+        "slug" : "product_detail",
+        "x" : -440,
+        "y" : -180,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "6mY27dBUxYApr9gFzsDsl$$rhtoWUl3VY60n1t5bKZ6y",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/product-detail"
+      }
+    },
+    "qatNsO_6jcpNyAuwDU2Dj$$U93Cbu_xwfMmdHgifNDnI" : {
+      "id" : "qatNsO_6jcpNyAuwDU2Dj$$U93Cbu_xwfMmdHgifNDnI",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "by_product_id",
+        "slug" : "by_product_id",
+        "x" : 40,
+        "y" : -100,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "yaIyBGIC09FRtWBkL6V7Z$$Xjqu-NvRZgDokW-2q273o",
+          "slug" : "in0"
+        }, {
+          "id" : "nEmANiF-AB3wNY4TZc8rB$$TZc0P_PcSHzkkeE3WTWiR",
+          "slug" : "in1",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "OrderID",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CustomerID",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ProductID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Quantity",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Price",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CustomerID",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Age",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Gender",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Location",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "MDUg0br9KSF-69zgNt7Nc$$GB2-67w0V94r6TnIelcbd",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.ProductID = in1.ProductID"
+          },
+          "joinType" : "inner"
+        } ],
+        "expressions" : [ ],
+        "hints" : [ {
+          "id" : "yaIyBGIC09FRtWBkL6V7Z$$Xjqu-NvRZgDokW-2q273o",
+          "alias" : "in0",
+          "hintType" : "none",
+          "propagateColumns" : false
+        }, {
+          "id" : "nEmANiF-AB3wNY4TZc8rB$$TZc0P_PcSHzkkeE3WTWiR",
+          "alias" : "in1",
+          "hintType" : "none",
+          "propagateColumns" : false
+        } ],
+        "allIn1" : null,
+        "activeTab" : "conditions",
+        "columnsSelector" : [ "nEmANiF-AB3wNY4TZc8rB$$TZc0P_PcSHzkkeE3WTWiR##ProductID", "yaIyBGIC09FRtWBkL6V7Z$$Xjqu-NvRZgDokW-2q273o##ProductID" ],
+        "allIn0" : null,
+        "whereClause" : null,
+        "headAlias" : "in0"
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.4&projectSubscriptionProjectId=12654&path=gems/Join",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "JuarOxOTpSmk0pZz9-zcZ$$Xa2yESXxPfhImuvCeXIu2" : {
+      "id" : "JuarOxOTpSmk0pZz9-zcZ$$Xa2yESXxPfhImuvCeXIu2",
+      "component" : "Script",
+      "metadata" : {
+        "label" : "Script_1",
+        "slug" : "Script_1",
+        "x" : -400,
+        "y" : -320,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "f8Ui6VH5cU_61vK-gu_H0$$U6FUbcomuAg1E53OEejGZ",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "Category",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Description",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "sxkY4doSZXtf_OWq1s9lx$$l2eNwzpUEQWvxZ8o7aStt",
+          "slug" : "out0"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : true
+      },
+      "properties" : {
+        "script" : "",
+        "scriptMethodHeader" : "def Script(spark: SparkSession, in0: DataFrame) -> DataFrame:",
+        "scriptMethodFooter" : "    return out0"
+      }
+    },
+    "9F230PsVb3WuBPASvwYnG$$UdgpUZ0wKgzPmlMfDQOlt" : {
+      "id" : "9F230PsVb3WuBPASvwYnG$$UdgpUZ0wKgzPmlMfDQOlt",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "product-order-data",
+        "slug" : "product_order_data",
+        "x" : -400,
+        "y" : 0,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "UZIsIyte3miNr9LjiVTcM$$x_VVxnJuaFpjyxXSkxN4L",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/product-order-data"
+      }
+    },
+    "CAiu8QeDU8QyaCGYjGuWH$$5FtJ91li1xfoZ3t-CuRYx" : {
+      "id" : "CAiu8QeDU8QyaCGYjGuWH$$5FtJ91li1xfoZ3t-CuRYx",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "category-description",
+        "slug" : "category_description",
+        "x" : -600,
+        "y" : -320,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "yJZmBx2P7HcCDxYnUXawh$$vVgOixSBjUtjvWHSBOs5a",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/category-description"
+      }
+    },
+    "H_EJM1LrgVswSHqiR2vO2$$RAofa0S1CsCSfFF7TqIxt" : {
+      "id" : "H_EJM1LrgVswSHqiR2vO2$$RAofa0S1CsCSfFF7TqIxt",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "by_customer_id",
+        "slug" : "by_customer_id",
+        "x" : -200,
+        "y" : 60,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "2jZ86ZMBvMCr2_xwfFec7$$sVrCfSkfbcm8SYunPLHfJ",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "OrderID",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CustomerID",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ProductID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Quantity",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Price",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        }, {
+          "id" : "qTWrRrDCz9dp3HQn6zY6z$$gmguyfV_BwEWoUFO3oRMU",
+          "slug" : "in1",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "CustomerID",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Age",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Gender",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Location",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "ayyRsUl0n3G1iYBWM1JA4$$9T7OYI2db1hZPzxOTiZI7",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.CustomerID = in1.CustomerID"
+          },
+          "joinType" : "inner"
+        } ],
+        "expressions" : [ ],
+        "hints" : [ {
+          "id" : "2jZ86ZMBvMCr2_xwfFec7$$sVrCfSkfbcm8SYunPLHfJ",
+          "alias" : "in0",
+          "hintType" : "none",
+          "propagateColumns" : false
+        }, {
+          "id" : "qTWrRrDCz9dp3HQn6zY6z$$gmguyfV_BwEWoUFO3oRMU",
+          "alias" : "in1",
+          "hintType" : "none",
+          "propagateColumns" : false
+        } ],
+        "allIn1" : null,
+        "activeTab" : "conditions",
+        "columnsSelector" : [ "qTWrRrDCz9dp3HQn6zY6z$$gmguyfV_BwEWoUFO3oRMU##CustomerID", "2jZ86ZMBvMCr2_xwfFec7$$sVrCfSkfbcm8SYunPLHfJ##CustomerID" ],
+        "allIn0" : null,
+        "whereClause" : null,
+        "headAlias" : "in0"
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.4&projectSubscriptionProjectId=12654&path=gems/Join",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "zcmcBUXNAdFaJOtHpNBM9$$0LF9VoA_LRTQ6yGuG4Ph9" : {
+      "id" : "zcmcBUXNAdFaJOtHpNBM9$$0LF9VoA_LRTQ6yGuG4Ph9",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "customer-data",
+        "slug" : "customer_data",
+        "x" : -400,
+        "y" : 140,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "u1ZnTSYNqk5cm9GrNkuxv$$jLKxlrBwh85imwYXJgOiG",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/customer-data"
+      }
+    },
+    "b7ohBIzUYBpAIk3cs37oa$$YO13DqUnJ6J68RyzXJiOO" : {
+      "id" : "b7ohBIzUYBpAIk3cs37oa$$YO13DqUnJ6J68RyzXJiOO",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "by_category_inner_join",
+        "slug" : "by_category_inner_join",
+        "x" : -220,
+        "y" : -240,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "xcEvO8G6kuOFdcCWagOWD$$s6OFNTyIq5-w-F2pJQfPI",
+          "slug" : "in0"
+        }, {
+          "id" : "r-VtigBZ9vRQbmR9RuFQx$$Vsk0FQq3KqQzDfFCudZOT",
+          "slug" : "in1",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "ProductID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Category",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Brand",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Type",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "9OI-AuknS2KwaTL98SMWq$$1a8hwjRpW-tehtGamS2OG",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.Category = in1.Category"
+          },
+          "joinType" : "inner"
+        } ],
+        "expressions" : [ ],
+        "hints" : [ {
+          "id" : "xcEvO8G6kuOFdcCWagOWD$$s6OFNTyIq5-w-F2pJQfPI",
+          "alias" : "in0",
+          "hintType" : "none",
+          "propagateColumns" : false
+        }, {
+          "id" : "r-VtigBZ9vRQbmR9RuFQx$$Vsk0FQq3KqQzDfFCudZOT",
+          "alias" : "in1",
+          "hintType" : "none",
+          "propagateColumns" : false
+        } ],
+        "allIn1" : null,
+        "activeTab" : "conditions",
+        "columnsSelector" : [ "xcEvO8G6kuOFdcCWagOWD$$s6OFNTyIq5-w-F2pJQfPI##Category", "r-VtigBZ9vRQbmR9RuFQx$$Vsk0FQq3KqQzDfFCudZOT##Category" ],
+        "allIn0" : null,
+        "whereClause" : null,
+        "headAlias" : "in0"
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.4&projectSubscriptionProjectId=12654&path=gems/Join",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    }
+  },
   "ports" : {
     "inputs" : [ ],
     "outputs" : [ ],
     "selectedInputFields" : [ ],
     "isCustomOutputSchema" : false,
     "autoUpdateOnRun" : false
-  }
+  },
+  "diagnostics" : [ {
+    "property" : "$.workflow.processes.JuarOxOTpSmk0pZz9-zcZ$$Xa2yESXxPfhImuvCeXIu2.ports.outputs",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 3,
+    "message" : "Please infer output schema from the cluster as described [here](https://docs.prophecy.io/low-code-spark/gems/custom/script/)",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 2
+  }, {
+    "property" : "$.workflow.processes.JuarOxOTpSmk0pZz9-zcZ$$Xa2yESXxPfhImuvCeXIu2.properties.script",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "Code cannot be empty.",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.b7ohBIzUYBpAIk3cs37oa$$YO13DqUnJ6J68RyzXJiOO",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.b7ohBIzUYBpAIk3cs37oa$$YO13DqUnJ6J68RyzXJiOO.properties.conditions[0].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "No match found for column in0.Category [Conditions]",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.qatNsO_6jcpNyAuwDU2Dj$$U93Cbu_xwfMmdHgifNDnI",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  }, {
+    "property" : "$.workflow.processes.qatNsO_6jcpNyAuwDU2Dj$$U93Cbu_xwfMmdHgifNDnI.properties.conditions[0].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "No match found for column in0.ProductID [Conditions]",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  } ]
 }

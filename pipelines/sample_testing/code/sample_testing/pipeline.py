@@ -4,9 +4,17 @@ from pyspark.sql.types import *
 from sample_testing.config.ConfigStore import *
 from sample_testing.udfs.UDFs import *
 from prophecy.utils import *
+from sample_testing.graph import *
 
 def pipeline(spark: SparkSession) -> None:
-    pass
+    df_product_detail = product_detail(spark)
+    df_category_description = category_description(spark)
+    df_Script_1 = Script_1(spark, df_category_description)
+    df_by_category_inner_join = by_category_inner_join(spark, df_Script_1, df_product_detail)
+    df_product_order_data = product_order_data(spark)
+    df_customer_data = customer_data(spark)
+    df_by_customer_id = by_customer_id(spark, df_product_order_data, df_customer_data)
+    df_by_product_id = by_product_id(spark, df_by_category_inner_join, df_by_customer_id)
 
 def main():
     spark = SparkSession.builder\

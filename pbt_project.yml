@@ -20,11 +20,67 @@ pipelines:
     language: python
     createdAt: '2024-03-19 11:24:09'
     datasets:
-      inputs: []
+      inputs:
+      - datasets/category-description
+      - datasets/customer-data
+      - datasets/product-detail
+      - datasets/product-order-data
       outputs: []
     subgraphs: []
     dependencies: {}
-datasets: {}
+datasets:
+  datasets/category-description:
+    name: category-description
+    description: ''
+    author: siddhesh@cloudaeon.net
+    createdAt: '2024-03-19 11:26:10'
+    mode: batch
+    physicalDatasets:
+      prophecy-demo-sid:
+        fabricId: 10098
+        datasetType: File
+        description: ''
+        author: siddhesh@cloudaeon.net
+        createdAt: '2024-03-19 11:26:10'
+  datasets/customer-data:
+    name: customer-data
+    description: ''
+    author: siddhesh@cloudaeon.net
+    createdAt: '2024-03-19 11:27:06'
+    mode: batch
+    physicalDatasets:
+      prophecy-demo-sid:
+        fabricId: 10098
+        datasetType: File
+        description: ''
+        author: siddhesh@cloudaeon.net
+        createdAt: '2024-03-19 11:27:06'
+  datasets/product-detail:
+    name: product-detail
+    description: ''
+    author: siddhesh@cloudaeon.net
+    createdAt: '2024-03-19 11:28:12'
+    mode: batch
+    physicalDatasets:
+      prophecy-demo-sid:
+        fabricId: 10098
+        datasetType: File
+        description: ''
+        author: siddhesh@cloudaeon.net
+        createdAt: '2024-03-19 11:28:12'
+  datasets/product-order-data:
+    name: product-order-data
+    description: ''
+    author: siddhesh@cloudaeon.net
+    createdAt: '2024-03-19 11:29:01'
+    mode: batch
+    physicalDatasets:
+      prophecy-demo-sid:
+        fabricId: 10098
+        datasetType: File
+        description: ''
+        author: siddhesh@cloudaeon.net
+        createdAt: '2024-03-19 11:29:01'
 templates: {}
 jobs: {}
 gemContainer:
