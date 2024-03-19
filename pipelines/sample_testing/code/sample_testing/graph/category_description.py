@@ -8,8 +8,6 @@ from sample_testing.udfs.UDFs import *
 
 def category_description(spark: SparkSession) -> DataFrame:
     return spark.read\
-        .schema(StructType([StructField("Category", StringType(), True), StructField("Description", StringType(), True)]))\
-        .option("header", True)\
-        .option("inferSchema", True)\
-        .option("sep", ",")\
-        .csv("dbfs:/FileStore/tables/siddhesh/new_data/Category_Description.txt")
+        .format("text")\
+        .schema(StructType([StructField("value", StringType(), True)]))\
+        .text("dbfs:/FileStore/tables/siddhesh/new_data/Category_Description.txt", wholetext = False, lineSep = None)

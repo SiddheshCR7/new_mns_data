@@ -16,4 +16,5 @@ def customer_data(spark: SparkSession) -> DataFrame:
         .option("header", True)\
         .option("inferSchema", True)\
         .option("sep", ",")\
+        .option("nullValue", "1098")\
         .csv("dbfs:/FileStore/tables/siddhesh/new_data/Customer_Data.txt")

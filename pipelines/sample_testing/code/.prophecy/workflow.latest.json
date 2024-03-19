@@ -112,8 +112,8 @@
       "metadata" : {
         "label" : "product-detail",
         "slug" : "product_detail",
-        "x" : -440,
-        "y" : -180,
+        "x" : -480,
+        "y" : -200,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -139,8 +139,8 @@
       "metadata" : {
         "label" : "by_product_id",
         "slug" : "by_product_id",
-        "x" : 40,
-        "y" : -100,
+        "x" : -60,
+        "y" : -140,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -149,7 +149,66 @@
       "ports" : {
         "inputs" : [ {
           "id" : "yaIyBGIC09FRtWBkL6V7Z$$Xjqu-NvRZgDokW-2q273o",
-          "slug" : "in0"
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "Category",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Description",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ProductID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Category",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Brand",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Type",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
         }, {
           "id" : "nEmANiF-AB3wNY4TZc8rB$$TZc0P_PcSHzkkeE3WTWiR",
           "slug" : "in1",
@@ -255,7 +314,7 @@
             "format" : "sql",
             "expression" : "in0.ProductID = in1.ProductID"
           },
-          "joinType" : "inner"
+          "joinType" : "outer"
         } ],
         "expressions" : [ ],
         "hints" : [ {
@@ -285,8 +344,8 @@
       "id" : "JuarOxOTpSmk0pZz9-zcZ$$Xa2yESXxPfhImuvCeXIu2",
       "component" : "Script",
       "metadata" : {
-        "label" : "Script_1",
-        "slug" : "Script_1",
+        "label" : "split_category_description",
+        "slug" : "split_category_description",
         "x" : -400,
         "y" : -320,
         "phase" : 0,
@@ -298,6 +357,24 @@
         "inputs" : [ {
           "id" : "f8Ui6VH5cU_61vK-gu_H0$$U6FUbcomuAg1E53OEejGZ",
           "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "value",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "sxkY4doSZXtf_OWq1s9lx$$l2eNwzpUEQWvxZ8o7aStt",
+          "slug" : "out0",
           "schema" : {
             "type" : "struct",
             "fields" : [ {
@@ -322,16 +399,12 @@
           },
           "isStreaming" : false
         } ],
-        "outputs" : [ {
-          "id" : "sxkY4doSZXtf_OWq1s9lx$$l2eNwzpUEQWvxZ8o7aStt",
-          "slug" : "out0"
-        } ],
         "selectedInputFields" : [ ],
         "isCustomOutputSchema" : true,
         "autoUpdateOnRun" : true
       },
       "properties" : {
-        "script" : "",
+        "script" : "out0 = in0.filter(\"value is not null\") \\\r\n    .rdd \\\r\n    .zipWithIndex() \\\r\n    .filter(lambda x: x[1] > 0) \\\r\n    .map(lambda x: x[0]) \\\r\n    .toDF() \\\r\n    .withColumn(\"cat\", expr(\"split(value, ',', 2)[0]\")) \\\r\n    .withColumn(\"Description\", expr(\"substring(value, length(split(value, ',', 2)[0])+2)\")) \\\r\n    .drop(\"value\") \\\r\n    .withColumnRenamed(\"cat\", \"Category\")",
         "scriptMethodHeader" : "def Script(spark: SparkSession, in0: DataFrame) -> DataFrame:",
         "scriptMethodFooter" : "    return out0"
       }
@@ -342,8 +415,8 @@
       "metadata" : {
         "label" : "product-order-data",
         "slug" : "product_order_data",
-        "x" : -400,
-        "y" : 0,
+        "x" : -380,
+        "y" : -100,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -397,7 +470,7 @@
         "label" : "by_customer_id",
         "slug" : "by_customer_id",
         "x" : -200,
-        "y" : 60,
+        "y" : -60,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -517,7 +590,7 @@
             "format" : "sql",
             "expression" : "in0.CustomerID = in1.CustomerID"
           },
-          "joinType" : "inner"
+          "joinType" : "outer"
         } ],
         "expressions" : [ ],
         "hints" : [ {
@@ -549,8 +622,8 @@
       "metadata" : {
         "label" : "customer-data",
         "slug" : "customer_data",
-        "x" : -400,
-        "y" : 140,
+        "x" : -560,
+        "y" : 40,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -577,7 +650,7 @@
         "label" : "by_category_inner_join",
         "slug" : "by_category_inner_join",
         "x" : -220,
-        "y" : -240,
+        "y" : -220,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -586,7 +659,30 @@
       "ports" : {
         "inputs" : [ {
           "id" : "xcEvO8G6kuOFdcCWagOWD$$s6OFNTyIq5-w-F2pJQfPI",
-          "slug" : "in0"
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "Category",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Description",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
         }, {
           "id" : "r-VtigBZ9vRQbmR9RuFQx$$Vsk0FQq3KqQzDfFCudZOT",
           "slug" : "in1",
@@ -647,7 +743,7 @@
             "format" : "sql",
             "expression" : "in0.Category = in1.Category"
           },
-          "joinType" : "inner"
+          "joinType" : "outer"
         } ],
         "expressions" : [ ],
         "hints" : [ {
@@ -680,108 +776,5 @@
     "selectedInputFields" : [ ],
     "isCustomOutputSchema" : false,
     "autoUpdateOnRun" : false
-  },
-  "diagnostics" : [ {
-    "property" : "$.workflow.processes.JuarOxOTpSmk0pZz9-zcZ$$Xa2yESXxPfhImuvCeXIu2.ports.outputs",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 3,
-    "message" : "Please infer output schema from the cluster as described [here](https://docs.prophecy.io/low-code-spark/gems/custom/script/)",
-    "tags" : [ ],
-    "relatedInformation" : [ ],
-    "diagnosticType" : 2
-  }, {
-    "property" : "$.workflow.processes.JuarOxOTpSmk0pZz9-zcZ$$Xa2yESXxPfhImuvCeXIu2.properties.script",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 1,
-    "message" : "Code cannot be empty.",
-    "tags" : [ ],
-    "relatedInformation" : [ ],
-    "diagnosticType" : 1
-  }, {
-    "property" : "$.workflow.processes.b7ohBIzUYBpAIk3cs37oa$$YO13DqUnJ6J68RyzXJiOO",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 2,
-    "message" : "One of the upstream gems is broken. Please, fix it first.",
-    "tags" : [ ],
-    "relatedInformation" : [ ],
-    "diagnosticType" : 1
-  }, {
-    "property" : "$.workflow.processes.b7ohBIzUYBpAIk3cs37oa$$YO13DqUnJ6J68RyzXJiOO.properties.conditions[0].expression.expression",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 2,
-    "message" : "No match found for column in0.Category [Conditions]",
-    "tags" : [ ],
-    "relatedInformation" : [ ],
-    "diagnosticType" : 1
-  }, {
-    "property" : "$.workflow.processes.qatNsO_6jcpNyAuwDU2Dj$$U93Cbu_xwfMmdHgifNDnI",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 2,
-    "message" : "One of the upstream gems is broken. Please, fix it first.",
-    "tags" : [ ],
-    "relatedInformation" : [ ],
-    "diagnosticType" : 1
-  }, {
-    "property" : "$.workflow.processes.qatNsO_6jcpNyAuwDU2Dj$$U93Cbu_xwfMmdHgifNDnI.properties.conditions[0].expression.expression",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 2,
-    "message" : "No match found for column in0.ProductID [Conditions]",
-    "tags" : [ ],
-    "relatedInformation" : [ ],
-    "diagnosticType" : 1
-  } ]
+  }
 }
